@@ -40,6 +40,12 @@ export function listRows(key: string): EntryRow[] {
   return allRows()[key] ?? []
 }
 
+// 绕过内存缓存直接读 localStorage：并发/重复提交时以最新落库的数据为准，
+// 避免拿着缓存里的旧状态把别人先落库的结论覆盖掉。
+export function readStoredRows(key: string): EntryRow[] {
+  return readStorage()[key] ?? []
+}
+
 export function saveRows(key: string, rows: EntryRow[]): void {
   const next = { ...allRows(), [key]: rows }
   cache = next

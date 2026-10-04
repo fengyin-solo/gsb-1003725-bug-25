@@ -6,6 +6,8 @@ const Waterlevel = () => import('@/views/waterlevel/index.vue')
 const Discharge = () => import('@/views/discharge/index.vue')
 const Rainfall = () => import('@/views/rainfall/index.vue')
 const Waterquality = () => import('@/views/waterquality/index.vue')
+const WaterqualityReview = () => import('@/views/waterquality/ReviewPanel.vue')
+const WaterqualityReport = () => import('@/views/waterquality/ReportDetail.vue')
 const Crosssection = () => import('@/views/crosssection/index.vue')
 const Telemetry = () => import('@/views/telemetry/index.vue')
 const Compilation = () => import('@/views/compilation/index.vue')
@@ -29,6 +31,8 @@ const router = createRouter({
     { path: '/discharge', name: 'discharge', component: Discharge },
     { path: '/rainfall', name: 'rainfall', component: Rainfall },
     { path: '/waterquality', name: 'waterquality', component: Waterquality },
+    { path: '/waterquality/review', name: 'waterquality-review', component: WaterqualityReview },
+    { path: '/waterquality/report/:id', name: 'waterquality-report', component: WaterqualityReport },
     { path: '/crosssection', name: 'crosssection', component: Crosssection },
     { path: '/telemetry', name: 'telemetry', component: Telemetry },
     { path: '/compilation', name: 'compilation', component: Compilation },

@@ -35,3 +35,25 @@ body { margin: 0; background: #f6f8fb; color: #1f2937; }
 .error-text { color: #b42318; }
 .status-legend { display: flex; flex-wrap: wrap; gap: 12px; margin: 0 0 10px; font-size: 12px; color: var(--muted); }
 .legend-item { background: #eef2f7; border-radius: 999px; padding: 2px 10px; }
+.tab-bar { display: flex; gap: 8px; margin-bottom: 12px; }
+.tab-item { padding: 6px 14px; border: 1px solid var(--border); border-radius: 6px; background: #fff; color: var(--muted); text-decoration: none; font-size: 13px; }
+.tab-item.tab-active { background: var(--brand); border-color: var(--brand); color: #fff; }
+.dialog-mask { position: fixed; inset: 0; background: rgba(15, 23, 42, 0.35); display: flex; align-items: center; justify-content: center; z-index: 20; }
+.dialog { background: #fff; border-radius: 8px; padding: 16px; width: 420px; max-width: 92vw; }
+.dialog h3 { margin: 0 0 10px; font-size: 15px; }
+.dialog-form { display: flex; flex-direction: column; gap: 10px; }
+.dialog-form label { display: flex; flex-direction: column; gap: 4px; font-size: 12px; color: var(--muted); }
+.dialog-form input, .dialog-form select, .dialog-form textarea { border: 1px solid var(--border); border-radius: 6px; padding: 6px 8px; font-size: 13px; }
+.dialog-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 4px; }
+.dialog-meta { margin: 0; font-size: 12px; color: var(--muted); }
+.detail-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px 16px; background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 12px; margin-bottom: 12px; }
+.detail-item span { display: block; font-size: 12px; color: var(--muted); }
+.detail-item strong { font-size: 14px; font-weight: 600; }
+.flow-steps { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 0 0 12px; font-size: 12px; color: var(--muted); }
+.flow-step { padding: 2px 10px; border-radius: 999px; background: #eef2f7; }
+.flow-step.active { background: var(--brand); color: #fff; }
+.identity-bar { display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end; background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; margin-bottom: 12px; }
+.identity-bar label { display: flex; flex-direction: column; gap: 4px; font-size: 12px; color: var(--muted); }
+.identity-bar input, .identity-bar select { border: 1px solid var(--border); border-radius: 6px; padding: 6px 8px; font-size: 13px; }
+.section-title { font-size: 14px; margin: 16px 0 8px; }
+.ok-text { color: #067647; }
