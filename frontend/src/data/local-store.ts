@@ -29,6 +29,15 @@ function readStorage(): Record<string, EntryRow[]> {
 
 let cache: Record<string, EntryRow[]> | null = null
 
+// 另一个标签页/窗口提交后，本页缓存立即失效，乐观锁才能读到对手的新版本号。
+if (typeof window !== 'undefined' && window.addEventListener) {
+  window.addEventListener('storage', (event) => {
+    if (event.key === STORAGE_KEY) {
+      cache = null
+    }
+  })
+}
+
 export function allRows(): Record<string, EntryRow[]> {
   if (cache === null) {
     cache = readStorage()
